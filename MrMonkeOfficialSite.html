@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr. Monke's Official Site</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #backgroundImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://i.postimg.cc/W3vZvCjR/what-if-animalcompany-gorillas-were-secretly-robots.png');
+      background-size: cover;
+      z-index: -1;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #profileImage {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    #container {
+      text-align: center;
+      padding-top: 120px;
+    }
+
+    #rainbowText {
+      font-size: 2em;
+      text-align: center;
+      margin-top: 100px;
+      text-decoration: none;
+    }
+
+    #randomText {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.85em;
+      color: lightgrey;
+    }
+
+    #discordWidget {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div id="backgroundImage"></div>
+
+  <img src="https://i.postimg.cc/ZnJ6rgDP/channels4-profile.jpg" id="profileImage" alt="Profile Picture" />
+
+  <div id="discordWidget">
+    <iframe
+      src="https://discord.com/widget?id=1361064212910047353&theme=dark"
+      width="350"
+      height="500"
+      allowtransparency="true"
+      frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+    </iframe>
+  </div>
+
+  <div id="container">
+    <a href="https://www.youtube.com/@MrMonke1432" id="rainbowText" target="_blank">SUBSCRIBE!</a>
+
+    <div id="randomText">
+      <p>Hey, welcome to Mr. Monke's official website! This is somewhat of a scuffed homepage, so enjoy! :D</p>
+    </div>
+  </div>
+
+  <script>
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    let i = 0;
+
+    setInterval(() => {
+      document.getElementById("rainbowText").style.color = colors[i];
+      i = (i + 1) % colors.length;
+    }, 200);
+  </script>
+</body>
+</html>
